@@ -50,6 +50,6 @@ python human_play.py
 ```
 This launches the game UI, allowing you to challenge the AI directly.
 
-### References
+## References
 English → [Theory and Implementation of AlphaQuoridor](https://doraking.medium.com/theory-and-implementation-of-alphaquoridor-cb9192f139a8)  
 Japanese → [AlphaQuoridorの理論と実装](https://note.com/dorakingx/n/n09cd88da9029)
