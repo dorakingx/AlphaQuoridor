@@ -2,10 +2,6 @@
 
 AlphaQuoridor is a project that combines game design with deep learning and Monte Carlo Tree Search (MCTS) to create an AI-driven board game experience. The system supports self-play for data collection, network training, parameter evaluation, and includes a user interface for human players to challenge the AI.
 
-For more details, please refer to the following links:  
-English → [Theory and Implementation of AlphaQuoridor](https://doraking.medium.com/theory-and-implementation-of-alphaquoridor-cb9192f139a8)  
-Japanese → [AlphaQuoridorの理論と実装](https://note.com/dorakingx/n/n09cd88da9029)
-
 ## Key Components
 
 - **game.py:** Implements the game design and core rules.
@@ -53,3 +49,7 @@ To play a game against the trained AI, run:
 python human_play.py
 ```
 This launches the game UI, allowing you to challenge the AI directly.
+
+## References
+English → [Theory and Implementation of AlphaQuoridor](https://doraking.medium.com/theory-and-implementation-of-alphaquoridor-cb9192f139a8)  
+Japanese → [AlphaQuoridorの理論と実装](https://note.com/dorakingx/n/n09cd88da9029)
