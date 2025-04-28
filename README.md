@@ -49,3 +49,7 @@ To play a game against the trained AI, run:
 python human_play.py
 ```
 This launches the game UI, allowing you to challenge the AI directly.
+
+### References
+English -> https://doraking.medium.com/theory-and-implementation-of-alphaquoridor-cb9192f139a8
+Japanese -> https://note.com/dorakingx/n/n09cd88da9029
