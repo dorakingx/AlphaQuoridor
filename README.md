@@ -33,9 +33,13 @@ Games like Shogi, Go, Othello, and Quoridor are two-player zero-sum games with p
 MCTS decides the next move based on the Upper Confidence Bound (UCB) value:
 
 $$
-\mathrm{UCB}(s,a) &= Q(s,a) + c\,\pi(a \mid s)\, \frac{\sqrt{N(s)}}{1 + N(s,a)}, \\[6pt]
-Q(s,a) &= \frac{1}{N(s,a)} \sum_{i=1}^{N(s,a)} v_i\!\bigl(s \xrightarrow{\,a\,} s'\bigr).
+\mathrm{UCB}(s,a) = Q(s,a) + c\,\pi(a \mid s)\, \frac{\sqrt{N(s)}}{1 + N(s,a)}
 $$
+
+$$
+Q(s,a) = \frac{1}{N(s,a)} \sum_{i=1}^{N(s,a)} v_i\!\bigl(s \xrightarrow{\,a\,} s'\bigr)
+$$
+
 
 where $Q(s,a)$ is the value estimate of action a in state $s$, averaged over the number of simulations $N(s,a)$ transitioning from state $s$ to $s^\prime$. $N(s)$ is the total number of simulations for state $s$. The first term of the equation emphasizes exploiting high-value actions, while the second term focuses on exploring actions that haven’t been simulated much, balanced by the hyperparameter $c$.
 
