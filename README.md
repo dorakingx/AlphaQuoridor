@@ -1,5 +1,7 @@
 # AlphaQuoridor
 
+![](./images/quoridor.png)
+
 In Japan, the board game Quoridor is not well-known. This article applies AlphaZero, a powerful deep reinforcement learning method, to Quoridor. Despite its simple design, AlphaZero has demonstrated the ability to outperform professional players in games like Go and Shogi. The goal is to deepen understanding of both the theoretical and practical aspects of AlphaZero through this application.
 
 ## What is Quoridor?
@@ -19,6 +21,8 @@ The simple rule that walls cannot completely block paths makes the game exciting
 AlphaZero [1, 2] combines deep learning, search, and reinforcement learning. Let’s explore each component:
 
 ### Deep Learning:
+![](./images/deep_learning.png)
+
 AlphaZero uses deep learning for intuition, similar to how professional players think about their best moves. It employs ResNet [3], a convolutional neural network used in image analysis. The game board, like an image, is a 2D array of information. The network can be represented as:
 
 $$
@@ -28,6 +32,9 @@ $$
 where s is the game state, $\pi(a∣s)$ is the policy (probability of action a given state $s$), and $v(s)$ is the value ($+1$ if win,$-1$ if loss) of state $s$.
 
 ### Search:
+
+![](./images/mcts.png)
+
 Games like Shogi, Go, Othello, and Quoridor are two-player zero-sum games with perfect information. The optimal strategy can be found using the minimax method, but it is impractical due to the large number of possible moves. Instead, AlphaZero uses Monte Carlo Tree Search (MCTS) to predict future moves.
 
 MCTS decides the next move based on the Upper Confidence Bound (UCB) value:
@@ -52,6 +59,9 @@ $$
 $$
 
 ### Reinforcement Learning:
+
+![](./images/reinforcement_learning.png)
+
 AlphaZero generates training data through self-play, updating ResNet parameters with this experience to create a more intelligent neural network. The process involves:
 
 1. Initializing ResNet parameters.
@@ -80,12 +90,16 @@ Due to the short training time, the game was trained on a 3x3 board. While this 
 The actual gameplay screen when running `human_play.py` looks like this. The number of walls for both the player and the enemy (AI) is set to one, matching the game size. To place a wall, click "Place Wall" below, select the vertical or horizontal direction, and then click the desired location (red grid points).
 
 ### Initial state
+![](./images/initial_state.png)
 
 ### Mid-game
+![](./images/midgame.png)
 
 ### End-game scenarios for winning
+![](./images/endgame_winning.png)
 
 ### End-game scenarios for losing
+![](./images/endgame_losing.png)
 
 The AI wasn’t very strong this time due to the limited training time. However, with a longer training period, a stronger AI could be developed.
 
