@@ -40,11 +40,11 @@ Games like Shogi, Go, Othello, and Quoridor are two-player zero-sum games with p
 MCTS decides the next move based on the Upper Confidence Bound (UCB) value:
 
 $$
-\mathrm{UCB}(s,a) = Q(s,a) + c\,\pi(a \mid s)\, \frac{\sqrt{N(s)}}{1 + N(s,a)}
+\mathrm{UCB}(s,a) = Q(s,a) + c\cdot\pi(a \mid s)\cdot\frac{\sqrt{N(s)}}{1 + N(s,a)}
 $$
 
 $$
-Q(s,a) = \frac{1}{N(s,a)} \sum_{i=1}^{N(s,a)} v_i\!\bigl(s \xrightarrow{\,a\,} s'\bigr)
+Q(s,a) = \frac{1}{N(s,a)} \sum_{i}^{N(s,a)} v_i\bigl(s \xrightarrow{a} s^\prime\bigr)
 $$
 
 
