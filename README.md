@@ -55,7 +55,7 @@ By repeating simulations, actions with higher $N(s,a)$ become valuable moves.
 In practice, the action $a$ to be taken in a given state $s$ is determined by the probability $\pi(a∣s)$, weighted by the Boltzmann distribution with temperature $T$.
 
 $$
-\pi(a \mid s) \;=\; \frac{N(s,a)^{1/T}} {\displaystyle \sum_{b} N(s,b)^{1/T}}.
+\pi(a \mid s) = \frac{N(s,a)^{1/T}} {\displaystyle \sum_{b} N(s,b)^{1/T}}.
 $$
 
 ### Reinforcement Learning:
